@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Обязательное поле</title>
+  <style type="text/css">
+    form {
+  width: 70%;
+  margin: 100px auto;
+  font: 700 .9em Arial, serif;
+}
+
+div {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding-bottom: 20px;
+  position: relative;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+p {
+  position: relative;
+  padding-left: 20px;
+}
+
+p input {
+  width: 220px;
+  position: relative;
+}
+
+p input, footer button {
+  position: absolute;
+  left: 100px;
+}
+
+footer button {
+  position: relative;
+  top: 10px;
+  width: 150px;
+  color: #fff;
+  background-color: #029E0A;
+  border-radius: 25px;
+  border: none;
+  height: 20px;
+  background: linear-gradient(#018D09, #0BE100);
+}
+
+footer button::before {
+  position: absolute;
+  content: '';
+  height: 50%;
+  width: 96%;
+  left: 2%;
+  top: 0.9px;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4));
+  border-radius: 25px;
+}
+
+p:nth-child(3n) {
+  margin-bottom: 40px;
+}
+
+p:last-child span:first-of-type {
+  font-weight: bold;
+  display: inline-block;
+  transform: rotate(15deg) translate(15px) skewY(-30deg);
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: lightgray;
+  position: relative;
+  border: 1px solid lightgray;
+}
+
+p input + span {
+  position: absolute;
+  left: 330px;
+  width: 200px;
+}
+
+p input:invalid + span::after {
+  content: 'x';
+  color: red;
+  position: absolute;
+}
+
+</style>
+ </head>
+ <body>
+  <form>
+      <div>
+
+        <p>
+          <label for="name">Имя</label>
+          <input type="text" name="name" id="name" required pattern="[А-Я][а-я]+" placeholder="Василий"><span></span>
+        </p>
+
+        <p>
+          <label for="second_name">Фамилия</label>
+          <input type="text" name="name" id="second_name" required pattern="[А-Я][а-я]+" placeholder="Васильев"><span></span>
+        </p>
+
+        <p>
+          <label for="sity">Город</label>
+          <input type="text" name="name" id="sity" required pattern="[А-Я][а-я]+" placeholder="Москва"><span></span>
+        </p>
+
+        <p>
+          <label for="Email">Эл. почта</label>
+          <input type="Email" name="name" id="Email" required placeholder="example@post.com"><span></span>
+        </p>
+
+        <p>
+          <label for="Password">Пароль</label>
+          <input type="password" name="name" id="Password" required placeholder="от 4 до 10 символов" minlength="4" maxlength="10"><span></span>
+        </p>
+        <p>
+          <label for="Password1">Повторите</label>
+          <input type="password" name="name" id="Password1" required placeholder="от 4 до 10 символов" minlength="4" maxlength="10"><span></span>
+        </p>
+      </div>
+      <footer>
+        <button type="submit">Зарегистрироваться</button>
+      </footer>
+    </form>
+ </body>
+</html>
